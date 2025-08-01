@@ -44,25 +44,29 @@ class ChatHistoryService:
             chat_history.append({**message_snapshot.to_dict(), "create_time": creation_time})
         return chat_history
 
-    @staticmethod
-    def get_all_user_messages_from_history(history: list[dict[str, str]]) -> str:
-        """
-        Retrieves all messages from a history and concatenates them
 
-        Args:
-            history (list): Body that contains all messages from user and bot
+    # @staticmethod
+    # def get_all_user_messages_from_history(history: list[dict[str, str]]) -> str:
+    #     """
+    #     Retrieves all messages from a history and concatenates them
 
-        Returns:
-            str: Concatenated body of the user messages in a history
-        """
-        history = sorted(history, key=lambda x: x.get("create_time", datetime.min))
-        messages = []
-        for message in history:
-            user_message = message.get("user_msg", "")
-            button_label_message = message.get("button_label", "")
-            if user_message:
-                messages.append(user_message)
-            elif button_label_message:
-                messages.append(button_label_message)
-        concatenated_messages = "\n".join(messages)
-        return concatenated_messages
+    #     Args:
+    #         history (list): Body that contains all messages from user and bot
+
+    #     Returns:
+    #         str: Concatenated body of the user messages in a history
+    #     """
+    #     history = sorted(history, key=lambda x: x.get("create_time", datetime.min))
+    #     messages = []
+    #     for message in history:
+    #         user_message = message.get("user_msg", "")
+    #         button_label_message = message.get("button_label", "")
+    #         bot_response = message.get("bot_response", {}).get("message")
+    #         if user_message:
+    #             messages.append(user_message)
+    #         elif button_label_message:
+    #             messages.append(button_label_message)
+    #     concatenated_messages = "\n".join(messages)
+    #     return concatenated_messages
+
+    
