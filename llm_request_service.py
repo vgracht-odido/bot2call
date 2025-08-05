@@ -107,14 +107,24 @@ class LLMRequestService:
         }
         return self.request(data, timeout=30)
 
-    def tag_callback(self, summary: str) -> str:
-        prompt = self.prompt_service.get_prompt("tag-callback")
+    def tag_callback(self, summary: str, customer_comment: str = "", service: str = "", telesales: str = "", techniek: str = "", activatie: str = "", tag_prompt: str = "") -> str:
+        # tag_prompt = self.prompt_service.get_prompt("tag-callback")
+        print(f"Summary: {summary}")
+        print(f"Customer Comment: {customer_comment}")
+        # print(f"Tag Prompt: {tag_prompt}\n")
+        # print(f"Queues: {service}\n {telesales}\n {techniek}")
         data = {
             "custom": {
                 "text": f"{summary}",
-                "prompt": prompt,
+                "customer_comment": f"{customer_comment}",
+                "service": f"{service}",
+                "telesales": f"{telesales}",    
+                "techniek": f"{techniek}",
+                "activatie": f"{activatie}",
+                "prompt": tag_prompt,
             }
         }
+        print(f"Data prepared: {data}\n")
         return self.request(data)
 
     def request(self, data: dict, timeout: int = 5) -> str:
