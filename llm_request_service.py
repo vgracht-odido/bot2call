@@ -137,8 +137,6 @@ class LLMRequestService:
         activatie: str = "",
         tag_prompt: str = "",
     ) -> str:
-        print(f"Summary: {summary}")
-        print(f"Customer Comment: {customer_comment}")
         data = {
             "custom": {
                 "text": f"{summary}",
