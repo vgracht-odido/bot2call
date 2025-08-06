@@ -1,0 +1,92 @@
+Session ID,Dialogue
+00001a3e-6022-4d94-a506-143856c60b0e,"Bot: Hallo, ik ben chatbot Izzi van Odido.
+Bot: Over welk product wil je iets vragen?
+
+User selected: Internet + TV
+Bot: Komen we er samen niet uit, dan zijn onze adviseurs er voor je.
+Bot: Wat kan ik voor je doen?
+
+User selected: Bestelstatus
+Bot: Ik vertel je graag meer over de status van je bestelling.
+Bot: Heb je een mail ontvangen met de bevestiging van je bestelling?
+
+User selected: Andere vraag
+Bot: Een andere vraag kan natuurlijk ook. Hoe kan ik je helpen?
+
+User: Adviseur spreken
+Bot: Ik ga voor je kijken of een adviseur je kan helpen.
+Bot: Kies 'Verkoop' voor hulp bij bestellen of verlengen van een abonnement en/of telefoon. Kies 'Service' voor andere vragen.
+
+User selected: Verkoop
+Bot: Ik kan je op dit moment helaas niet doorverbinden met een adviseur.
+Bot: Je kan onze adviseurs bellen op 0800-0092. Op maandag t/m vrijdag zijn we bereikbaar van 8-20 uur, op zaterdag van 9-17.30 uur, op zondag van 12-17.30 uur, op feestdagen zijn we gesloten.
+Bot: Neem een kijkje op onze community. Grote kans dat je het antwoord op je vraag vindt.
+
+User: Adviseur spreken
+Bot: Ik ga voor je kijken of een adviseur je kan helpen.
+Bot: Kies 'Verkoop' voor hulp bij bestellen of verlengen van een abonnement en/of telefoon. Kies 'Service' voor andere vragen.
+
+User selected: Service
+Bot: Ik kan je op dit moment helaas niet doorverbinden met een adviseur.
+Bot: Je kan onze adviseurs bellen op 0800-0092. Op maandag t/m vrijdag bel je ons van 8-20 uur, op zaterdag en zondag van 9-17.30 uur, op feestdagen zijn we gesloten.
+Bot: Neem een kijkje op onze community. Grote kans dat je het antwoord op je vraag vindt."
+00000bdf-17cf-429e-aba9-bf5cfe4f9ba6,"User: Ik heb geen wifi meer
+Bot: Ik begrijp dat je een vraag hebt over Internet (+ TV + Vast Bellen). Klopt dit?
+
+User selected: Ja
+Bot: Als je geen verbinding hebt, dan gaan we daar iets aan doen.
+Bot: We hebben een storing in Ervaar je problemen met je verbinding? Dan helpt onderstaand stappenplan je verder:​​Onderhoud , Wifi, Internet, Televisie, Telefonie en Mobiel . 
+Bot: Wordt jouw probleem veroorzaakt door de storing die bij ons bekend is?
+
+User selected: Nee
+Bot: Ik heb gecontroleerd of er een storing is. Er is op dit moment geen netwerkstoring.
+Bot: Misschien is er wel een storing in je buurt. Dit bekijk je in Mijn Odido.
+Bot: Is er een lokale storing bekend?
+
+User selected: Nee
+Bot: Oké, dan gaan we verder speuren naar een oplossing.
+Bot: Heb je tijd om een aantal dingen te checken?
+
+User selected: Ja
+Bot: Oké, een paar dingen kan je zelf doen om je internet te repareren.
+Bot: Als eerste: zet je modem uit en trek de stekker eruit voor 30 seconden. Doe de stekker er terug in en zet je modem weer aan.
+Bot: Doet je internet het hierna weer?
+
+User selected: Nee
+Bot: Het kan dat er iets is met je modem.
+Bot: Om je te verder te helpen, wil ik graag weten welk modem je hebt. Het merk vind je vaak op de voorkant of op een sticker.
+Bot: Welk modem heb je?
+
+User selected: Zyxel
+Bot: Check. En heb je glasvezelinternet?
+
+User selected: Nee
+Bot: Check de lampjes op je modem.
+Bot: Branden de lampjes zoals op de afbeelding?
+
+User selected: Nee
+Bot: Dan schakel ik graag de hulp in van 1 van onze adviseurs. Die helpt je graag verder.
+Bot: Zal ik je doorverbinden?
+
+User selected: Ja
+Bot: Vul je gegevens hieronder in en klik op de knop om met een adviseur te chatten."
+00001339-f528-42df-b90f-d07ec400c96d,"Bot: Goedemiddag Sonja, ik ben chatbot Izzi. Welkom bij Odido. Je kan bij mij terecht met je vragen die horen bij telefoonnummer 0614256262.
+Bot: Komen we er samen niet uit, dan zijn onze adviseurs er voor je.
+Bot: Wat kan ik voor je doen?
+
+User: Ik zit in zone 2, heb meer dan 80% verbruikt maar kan niet aanvullen met mbs 
+Bot: Ik begrijp dat je een vraag hebt over een van de                                             onderstaande onderwerpen. Kun je aangeven over welk                                             onderwerp het gaat?
+
+User selected: MB's
+Bot: Je hebt een vraag over je data. Daar help ik je graag mee.
+Bot: Waar wil je meer over weten?
+
+User selected: GB's aanvullen
+Bot: Er zijn op dit moment geen GB-aanvullers beschikbaar voor je.
+Bot: Een van onze adviseurs kan voor je checken hoe dat komt.
+Bot: Wil je een adviseur spreken?
+
+User selected: Ja
+Bot: Al onze adviseurs zijn op dit moment bezet.
+Bot: Je kan onze adviseurs bellen 0800-0092. Op maandag t/m vrijdag bel je ons van 8-20 uur, op zaterdag van 9-17.30 uur, op zondag van 12-17.30 uur, op feestdagen zijn we gesloten.
+Bot: Neem een kijkje op onze community. Grote kans dat je het antwoord op je vraag vindt."

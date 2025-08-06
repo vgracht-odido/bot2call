@@ -1,5 +1,6 @@
 from datetime import datetime
 from typing import Generator
+from typing import List, Dict, Any
 from google.cloud.firestore import (
     Client as FirestoreClient,
     CollectionReference,
@@ -41,9 +42,27 @@ class ChatHistoryService:
         chat_history = []
         for message_snapshot in stream:
             creation_time: datetime = message_snapshot.create_time
-            chat_history.append({**message_snapshot.to_dict(), "create_time": creation_time})
+            chat_history.append(
+                {**message_snapshot.to_dict(), "create_time": creation_time}
+            )
         return chat_history
 
+
+    def get_chat_histories_by_ids(self, session_ids: List[str]) -> Dict[str, List[Dict]]:
+        """
+        Retrieves the chat history documents from Firestore based on multiple session_ids
+        Args:
+            session_ids (List[str]): List of session IDs to retrieve the chat histories
+        Returns:
+            Dict[str, List[Dict]]: Dictionary containing session IDs as keys and their respective chat histories as values
+        """
+        chat_histories = {}
+        for session_id in session_ids:
+            try:
+                chat_histories[session_id] = self.get_chat_history_by_id(session_id)
+            except ChatHistoryNotFoundException:
+                chat_histories[session_id] = []
+        return chat_histories
 
     # @staticmethod
     # def get_all_user_messages_from_history(history: list[dict[str, str]]) -> str:
@@ -68,5 +87,3 @@ class ChatHistoryService:
     #             messages.append(button_label_message)
     #     concatenated_messages = "\n".join(messages)
     #     return concatenated_messages
-
-    

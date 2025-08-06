@@ -1,6 +1,7 @@
 import os
 import logging
 import requests
+from typing import List, Dict, Any
 from requests import Response
 from google.cloud import error_reporting
 from google.cloud.error_reporting import Client as ErrorReportingClient
@@ -107,18 +108,43 @@ class LLMRequestService:
         }
         return self.request(data, timeout=30)
 
-    def tag_callback(self, summary: str, customer_comment: str = "", service: str = "", telesales: str = "", techniek: str = "", activatie: str = "", tag_prompt: str = "") -> str:
-        # tag_prompt = self.prompt_service.get_prompt("tag-callback")
+    def summarize_conversations(
+        self, conversations: Dict[str, str], replace_prompt: str = ""
+    ) -> Dict[str, str]:
+        prompt = (
+            replace_prompt
+            if replace_prompt
+            else self.prompt_service.get_prompt("summarize-chat-conversation")
+        )
+        summaries = {}
+        for session_id, conversation in conversations.items():
+            data = {
+                "custom": {
+                    "text": f"{conversation}",
+                    "prompt": prompt,
+                }
+            }
+            summaries[session_id] = self.request(data, timeout=30)
+        return summaries
+
+    def tag_callback(
+        self,
+        summary: str,
+        customer_comment: str = "",
+        service: str = "",
+        telesales: str = "",
+        techniek: str = "",
+        activatie: str = "",
+        tag_prompt: str = "",
+    ) -> str:
         print(f"Summary: {summary}")
         print(f"Customer Comment: {customer_comment}")
-        # print(f"Tag Prompt: {tag_prompt}\n")
-        # print(f"Queues: {service}\n {telesales}\n {techniek}")
         data = {
             "custom": {
                 "text": f"{summary}",
                 "customer_comment": f"{customer_comment}",
                 "service": f"{service}",
-                "telesales": f"{telesales}",    
+                "telesales": f"{telesales}",
                 "techniek": f"{techniek}",
                 "activatie": f"{activatie}",
                 "prompt": tag_prompt,
