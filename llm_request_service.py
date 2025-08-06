@@ -129,6 +129,7 @@ class LLMRequestService:
 
     def tag_callback(
         self,
+        session_id: str,
         summary: str,
         customer_comment: str = "",
         service: str = "",
@@ -139,12 +140,13 @@ class LLMRequestService:
     ) -> str:
         data = {
             "custom": {
-                "text": f"{summary}",
-                "customer_comment": f"{customer_comment}",
-                "service": f"{service}",
-                "telesales": f"{telesales}",
-                "techniek": f"{techniek}",
-                "activatie": f"{activatie}",
+                "session_id": session_id,
+                "text": summary,
+                "customer_comment": customer_comment,
+                "service": service,
+                "telesales": telesales,
+                "techniek": techniek,
+                "activatie": activatie,
                 "prompt": tag_prompt,
             }
         }
